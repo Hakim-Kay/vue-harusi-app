@@ -17,10 +17,17 @@ jobs:
         run: npm install
       - name: Build project
         run: npm run build
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli@0.11.x
       - name: Run Lighthouse CI
         run: lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      - name: Upload Lighthouse report
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-report
+          path: .lighthouseci
       - name: List directory contents
         run: |
           echo "Current directory:"
