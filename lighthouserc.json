@@ -1,0 +1,21 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": "./dist"
+    },
+    "assert": {
+      "service-worker": "warning",
+      "installable-manifest": "warning",
+      "works-offline": "warning",
+      "offline-start-url": "off",
+      "splash-screen": "off",
+      "themed-omnibox": "off",
+      "maskable-icon": "off",
+      "apple-touch-icon": "off",
+      "categories:pwa": ["warning", {"minScore": 0.5}]
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
