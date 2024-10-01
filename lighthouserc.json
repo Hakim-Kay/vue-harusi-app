@@ -4,15 +4,13 @@
       "staticDistDir": "./dist"
     },
     "assert": {
-      "service-worker": "warning",
-      "installable-manifest": "warning",
-      "works-offline": "warning",
-      "offline-start-url": "off",
-      "splash-screen": "off",
-      "themed-omnibox": "off",
-      "maskable-icon": "off",
-      "apple-touch-icon": "off",
-      "categories:pwa": ["warning", {"minScore": 0.5}]
+      "assertions": {
+        "categories:performance": ["warn", {"minScore": 0.9}],
+        "categories:accessibility": ["warn", {"minScore": 0.9}],
+        "categories:best-practices": ["warn", {"minScore": 0.9}],
+        "categories:seo": ["warn", {"minScore": 0.9}],
+        "categories:pwa": ["warn", {"minScore": 0.5}]
+      }
     },
     "upload": {
       "target": "temporary-public-storage"
