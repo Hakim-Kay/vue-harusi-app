@@ -20,10 +20,7 @@ import Header1 from "./components/header1.vue";
       <div class="grid-cols-2"></div>
     </div>
   </div>
-
-
 </template>
 
 <style scoped>
-
 </style>
